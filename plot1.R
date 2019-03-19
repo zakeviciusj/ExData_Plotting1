@@ -1,5 +1,8 @@
 # This script will replicate the plot 1 in Assignment 1
 
+# Here we set the working directory
+script.dir <- dirname(sys.frame(1)$ofile)
+setwd(script.dir)
 # We start by reading the data from the file
 household <- read.table("household_power_consumption.txt", sep=";", header = TRUE, 
               colClasses = c("character", "character", "numeric", "numeric", "numeric",
